@@ -1,0 +1,154 @@
+<!DOCTYPE HTML>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+  <title th:text="${title}"/>
+  <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-eOJMYsd53ii+scO/bJGFsiCZc+5NDVN2yr8+0RDqr0Ql0h+rP48ckxlpbzKgwra6" crossorigin="anonymous">
+</head>
+<body>
+<headers th:insert="blocks/headeradmin :: header"></headers>
+<div style = "width: 50%;
+    text-align: center;
+    margin-left: auto;
+    margin-right: auto;">
+  <h1 class="headline text-pink" align="center"><span>О нас</span></h1>
+  <span>
+Уже более 10 лет федеральная сеть магазинов предлагает своим покупателям более 20 000 наименований товаров известных мировых брендов и отечественных производителей.
+
+Благодаря централизованной системе закупок компания может предложить лучшее соотношение цены и качества, что является визитной карточкой Сети. Динамический вектор развития, заданный в компании ещё на заре её становления, позволяет привлекать всё больше новых клиентов. Разветвленная Сеть магазинов позволяет нам быть ближе к каждому покупателю, но мы не останавливаемся на достигнутом, а продолжаем расширять географию наших магазинов.
+
+Мы работаем как с физическими, так и с юридическими лицами. Огромное количество наших клиентов придя к нам впервые, остались с нами на долгие годы. Магазины нашей Сети осуществляют продажу товара как за наличный, так и безналичный расчет. Квалифицированные сотрудники наших магазинов всегда готовы проконсультировать и помочь с выбором нужного товара.
+
+Воспользуйтесь нашим интернет-магазином.
+
+Интернет-магазин компании создан в далеком 2006 году. Это был один из первых интернет-магазинов автозапчастей на территории СНГ. За более чем десятилетнюю историю клиентами интернет-магазина стали сотни тысяч автолюбителей.
+
+Сегодня интернет-магазин автозапчастей предлагает своим клиентам только проверенную и качественную продукцию известных производителей. Все товары проходят тщательную проверку перед тем, как попасть на прилавок. Магазин работает в рамках законодательства Российской Федерации, тех его частей, которые касаются защиты прав покупателей, в первую очередь это касается возврата и обмена товара, а также его качества.
+
+Интернет-магазин является сертифицированным представителем большинства ведущих брендов производителей запчастей и сопутствующей продукции. Заключено более 500 договоров о сотрудничестве с производителями различной продукции. Схема распространения автозапчастей и сопутствующей продукции исключает участие посредников и третьих лиц, что позволяет предложить своим клиентам объективно низкие цены. В ценообразовании товаров немалую роль сыграл большой товарооборот группы Компаний.
+
+Среди клиентов компании простые автолюбители, частные мастерские по ремонту автомобилей, крупные СТО, таксопарки и крупные автопарки, а также магазины автозапчастей по всей России и, даже, известные автопроизводители. Гибкое ценообразование на весь товарный ряд позволяет предлагать уникальные цены на всю продукцию, постоянный клиент с любым оборотом может рассчитывать на индивидуальные цены.
+
+Коллектив интернет-магазина рад видеть Вас среди своих клиентов.
+
+Приятных покупок!
+
+Наша компания открыта для всех партнеров и готова рассмотреть различные варианты взаимовыгодного сотрудничества!
+
+С нами — удобно, выгодно, надежно!
+    </span>
+</div>
+
+<style>
+.text-pink {
+      color: #38051c!important;
+  }
+.abc {
+margin-bottom: 4em;
+}
+
+.advantages-items .advantages-item:nth-child(2n) {
+    float: right;
+}
+.advantages-items .advantages-item:nth-child(2n+1) {
+    clear: left;
+}
+h1, h2, h3, h4, h5, h6 {
+    margin: 0 0 1em 0;
+    line-height: 1.1;
+    text-transform: uppercase;
+}
+.typography ul li::before {
+    content: "—";
+    position: absolute;
+    margin-left: -1.53846em;
+    color: #880e4f;
+}
+.advantages__lead {
+    font-size: 1.23077em;
+    line-height: 1.4;
+}
+.advantages-items .advantages-item {
+    float: left;
+    width: 48%;
+    padding-left: 4.61538em;
+    margin-bottom: .23077em;
+    list-style-type: none;
+    margin-left: 3em;
+     margin-right: 3em;
+    margin-top: 1em;
+    color: #000;
+}
+li {
+    display: list-item;
+    text-align: -webkit-match-parent;
+}
+.advantages span {
+    position: absolute;
+    height: 1.92308em;
+    min-width: 1.92308em;
+    padding-left: .19231em;
+    padding-right: .19231em;
+    margin-left: -2.26923em;
+    border: 3px solid #880e4f;
+    border-radius: 50%;
+    color: #880e4f;
+    font-size: 2em;
+    text-align: center;
+    font-weight: 700;
+    line-height: 1.76923em;
+}
+.headline {
+    margin-bottom: 0.45em;
+    margin-top: 1em;
+    overflow: hidden;
+    line-height: 1.25;
+}
+p {
+    margin: 0 0 .769em 0;
+}
+p {
+    display: block;
+    margin-block-start: 1em;
+    margin-block-end: 1em;
+    margin-inline-start: 0px;
+    margin-inline-end: 0px;
+}
+.advantages {
+    margin-top: 2.23077em;
+    margin-bottom: 50px;
+}
+.advantages-items {
+    padding-left: 0;
+    margin-bottom: .46154em;
+}
+
+ol, ul {
+    margin: 0;
+    padding: 0;
+    list-style-type: none;
+    color: #000!important;
+}
+
+.ol1{
+    margin-left: -7.5em;
+}
+ol {
+    display: block;
+    list-style-type: decimal;
+    margin-block-start: 1em;
+    margin-block-end: 1em;
+    margin-inline-start: 0px;
+    margin-inline-end: 0px;
+    padding-inline-start: 40px;
+}
+
+.typography {
+  margin-left: 150px;
+  margin-right: 150px;
+  }
+
+</style>
+
+</body>
+</html>

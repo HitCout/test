@@ -1,0 +1,110 @@
+<!DOCTYPE HTML>
+<html xmlns:th="http://www.thymeleaf.org" xmlns="http://www.w3.org/1999/html">
+<head>
+  <title th:text="${title}"/>
+  <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.2.0/jquery.min.js"></script>
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-eOJMYsd53ii+scO/bJGFsiCZc+5NDVN2yr8+0RDqr0Ql0h+rP48ckxlpbzKgwra6" crossorigin="anonymous">
+  <headers th:insert="blocks/header :: header"></headers>
+</head>
+<body>
+<div class="cont">
+  <input id = "log" type="text" name="log" value="${lg}"  style="display:none" required>
+    <div th:if="${lg}=='root'" class=""><div  th:if="${ps}=='123'" class="">
+      <div id="exa">
+        <p>ВЫ вошли как админ</p>
+        <form method="post" action="/rt"><input type="text" name="rt" value="admin"  style="display:none" required><button type="submit" class="bok">Подтвердить</button></form></a></div></div></div>
+  <div th:each="el : ${users}" class="">
+    <div  th:if="${el.login}==${lg}" class=""><div th:if="${el.pass}==${ps}" class="">
+      <div id="ex">
+        <div><p class="fio" th:text="${el.fio}" style="display:none"></p><p class="adress" th:text="${el.adress}" style="display:none"></p></div>
+        <p>Вы вошли как пользователь</p>
+        <form method="post" action="/rt">
+          <input type="text" name="rt" value="user"  style="display:none" required><button type="submit" class="bok">Подтвердить</button>
+          <div th:each="el : ${users}" th:if="${el}==${lg}">
+            <input id = "id" type="text" style="display:none" placeholder="Введите Email" name="ids" value="${el.id}}" required>
+            </div>
+            </form></div></div></div>
+  </div>
+    <div id="op" class="">
+      <p>Неправильный логин или пароль</p>
+      <a href="/login"><button type="submit" class="bok">назад</button></a>
+    </div></div>
+
+
+
+<style>
+  .cont{
+  width:100%;
+  padding:25% 0%;
+  text-align:center;
+  font-size: -webkit-xxx-large;
+  }
+  .bok{
+ border: none;
+    background-color: inherit;
+    cursor: pointer;
+    display: inline-block;
+    }
+</style>
+
+<script>
+$( document ).ready(function()
+{
+ if ($("#exa").length)
+ {
+        $( "#ex" ).hide();
+        $( "#op" ).hide();
+        }
+	    else
+	    {
+	    if ($("#ex").length)
+        {
+        $( "#op" ).hide();
+        }
+	    else
+	    {
+        $( "#op" ).show();
+         }
+}
+ $( ".showprof" ).click(function(){
+	    $( "div#prof" ).show();
+	  });
+ $( ".hideprof" ).click(function(){
+	    $( "div#prof" ).hide();
+	  });
+$( ".showsign" ).click(function(){
+	    $( "div#sign" ).show();
+	  });
+ $( ".hidesign" ).click(function(){
+	    $( "div#sign" ).hide();
+	  });
+});
+
+// Получаем данные из LocalStorage
+function getCartData(){
+  return JSON.parse(localStorage.getItem('user'));
+}
+// Записываем данные в LocalStorage
+function setCartData(o){
+  localStorage.setItem('user', JSON.stringify(o));
+  return false;
+}
+
+      var cartData = getCartData() || {}; // получаем данные корзины или создаём новый объект, если данных еще нет
+      parentBox = this.parentNode; // родительский элемент кнопки "Добавить в корзину"
+      fio = document.querySelector('.fio').innerHTML;
+      adress = document.querySelector('.adress').innerHTML;
+      cartData[1] = [fio];
+      cartData[2] = [adress];
+      setCartData(cartData);
+      console.log(fio+'|'+adress);
+      console.log(cartData);
+
+$( ".bu" ).click(function(){
+
+ return false;
+});
+</script>
+</body>
+</html>

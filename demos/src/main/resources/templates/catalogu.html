@@ -1,0 +1,749 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+  <title th:text="${title}"/>
+  <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-eOJMYsd53ii+scO/bJGFsiCZc+5NDVN2yr8+0RDqr0Ql0h+rP48ckxlpbzKgwra6" crossorigin="anonymous">
+</head>
+<body>
+
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/2.2.0/jquery.min.js"></script>
+
+<script type="text/javascript">
+	$( document ).ready(function(){
+	     $( "div#md" ).hide();
+	     $( "div#m" ).hide();
+	    $( "div#w" ).hide();
+	    $( "div#md" ).hide();
+	    $( "div#wd" ).hide();
+	     $( "div#ml" ).hide();
+	      $( "div#wl" ).hide();
+	      $( "div#mv" ).hide();
+	      $( "div#wv" ).hide();
+	      $( "div#wm" ).hide();
+	       $( "div#mm" ).hide();
+	        $( "div#b1").hide();
+	         $( "div#b2").hide();
+	          $( "div#b3").hide();
+             $( "div#bra").hide();
+	         $( "div#brb").hide();
+	         $( "div#brc").hide();
+	         $( "div#brd").hide();
+
+        if ($("#1").length){
+        $( "#search" ).hide();
+	    };
+
+
+	  $( ".hide" ).click(function(){
+	    $( "div#md" ).hide();
+	     $( "div#m" ).hide();
+	    $( "div#w" ).hide();
+	    $( "div#md" ).hide();
+	    $( "div#wd" ).hide();
+	     $( "div#ml" ).hide();
+	      $( "div#wl" ).hide();
+	      $( "div#mv" ).hide();
+	      $( "div#wv" ).hide();
+	      $( "div#wm" ).hide();
+	       $( "div#mm" ).hide();
+	       $( "div#1").hide();
+            $( "div#b1").hide();
+	         $( "div#b2").hide();
+	          $( "div#b3").hide();
+             $( "div#bra").hide();
+	         $( "div#brb").hide();
+	         $( "div#brc").hide();
+	         $( "div#brd").hide();
+	         $( "div#search").hide();
+	  });
+
+ $( ".hidebl" ).click(function(){
+            $( "div#b1").hide();
+	         $( "div#b2").hide();
+	          $( "div#b3").hide();
+	  });
+
+$( ".hidesearch" ).click(function(){
+            $( "div#search").hide();
+
+	  });
+
+	  $( ".showm" ).click(function(){
+	    $( "div#m" ).show();
+	  });
+	  $( ".showw" ).click(function(){
+	    $( "div#w" ).show();
+	  });
+	  $( ".showmd" ).click(function(){
+	    $( "div#md" ).show();
+	  });
+	  $( ".showwd" ).click(function(){
+	    $( "div#wd" ).show();
+	  });
+	   $( ".showwl" ).click(function(){
+	    $( "div#wl" ).show();
+	  });
+	   $( ".showml" ).click(function(){
+	    $( "div#ml" ).show();
+	  });
+	   $( ".showwv" ).click(function(){
+	    $( "div#wv" ).show();
+	  });
+	   $( ".showmv" ).click(function(){
+	    $( "div#mv" ).show();
+	  });
+	   $( ".showwm" ).click(function(){
+	    $( "div#wm" ).show();
+	  });
+	   $( ".showmm" ).click(function(){
+	    $( "div#mm" ).show();
+	  });
+	   $( ".showbra" ).click(function(){
+	    $( "div#bra" ).show();
+	  });
+	   $( ".showbrb" ).click(function(){
+	    $( "div#brb" ).show();
+	  });
+	   $( ".showbrc" ).click(function(){
+	    $( "div#brc" ).show();
+	  });
+	   $( ".showbrd" ).click(function(){
+	    $( "div#brd" ).show();
+	  });
+	  $( ".showsearch" ).click(function(){
+	    $( "div#search" ).show();
+	  });
+      $( ".showall" ).click(function(){
+           $( "div#m" ).show();
+	       $( "div#w" ).show();
+	      $( "div#md" ).show();
+	      $( "div#wd" ).show();
+	      $( "div#ml" ).show();
+	      $( "div#wl" ).show();
+	      $( "div#mv" ).show();
+	      $( "div#wv" ).show();
+	      $( "div#wm" ).show();
+	      $( "div#mm" ).show();
+	      $( "div#bra").show();
+	      $( "div#brb").show();
+	      $( "div#brc").show();
+	      $( "div#brd").show();
+	  });
+	  $( ".showb1" ).click(function(){
+	    $( "div#b1" ).show();
+	  });
+	  $( ".showb2" ).click(function(){
+	    $( "div#b2" ).show();
+	  });
+	  $( ".showb3" ).click(function(){
+	    $( "div#b3" ).show();
+	  });
+      $( ".show1" ).click(function(){
+	    $( "div#1" ).show();
+	  });
+
+	  $( ".myWish" ).click(function(){
+	    $( "div#success-alert" ).show();
+	  });
+
+	});
+
+		</script>
+
+
+
+<headers th:insert="blocks/headeruser :: header"></headers>
+
+<div class="">
+  <div class="topmenu">
+    <div class="">
+    <a href="#" class="hide showm showb1 tl"><b>Запчасти Б/У</b><i class="fa fa-angle-down"></i></a>
+    <a href="#" class="hide showw showb2 tl"><b>Запчасти</b><i class="fa fa-angle-down"></i></a>
+    <a href="#" class="hidebl showb3 tl"><b>Бренд</b><i class="fa fa-angle-down"></i></a>
+    <a href="#" class="hide showall tl"><b>Все</b><i class="fa fa-angle-down"></i></a>
+    </div>
+    <div id="b1">
+      <a href="#" class="hide showmd tl"><i>Диски</i></a>
+      <a href="#" class="hide showml tl"><i>Шины</i></a>
+      <a href="#" class="hide showmv tl"><i>Аккумуляторы</i></a>
+      <a href="#" class="hide showmm tl"><i>Запчасти для ТО</i></a>
+    </div>
+    <div id="b2">
+      <a href="#" class="hide showwd tl"><i>Диски</i></a>
+      <a href="#" class="hide showwl tl"><i>Шины</i></a>
+      <a href="#" class="hide showwv tl"><i>Аккумуляторы</i></a>
+      <a href="#" class="hide showwm tl"><i>Запчасти для ТО</i></a>
+
+    </div>
+    <div id="b3">
+      <a href="#" class="hide showbra tl"><i>Ad</i></a>
+      <a href="#" class="hide showbrb tl"><i>Gore</i></a>
+      <a href="#" class="hide showbrc tl"><i>Look</i></a>
+      <a href="#" class="hide showbrd tl"><i>Star</i></a>
+    </div>
+  </div>
+  </div>
+
+<style>
+  .tl{
+  padding:0 25px;
+  color:black;
+  text-transform: uppercase;
+  -webkit-text-stroke-width: thin;
+  }
+</style>
+
+<div th:if="${find}==null" id="1" style="margin-top:100px">
+  <img class="imgc" style = "width:15%" src="https://image.flaticon.com/icons/png/512/25/25366.png">
+<br><p class="kt">Выберите каталог</p>
+</div>
+
+
+
+
+<div id="search">
+  <h1 th:if="${find}!=null" th:text="'Поиск:'+${find}" style="text-align:center"></h1>
+  <div id = "na" class=""> <h1 style="text-align:center"></h1>
+    <div th:each="el : ${products}" th:if="${#strings.contains({el.name},{find})}==true" class="item_box"> <div class="card">
+      <img class="card-img-left" style = "width:15%" th:src="${el.img}"  alt="Card image cap"><div class="card-body"> <div class ="btnl">
+      <h5 class="card-title" th:text="${el.name}"/>
+      <p class="card-text" th:text="${el.about}"/> </div> <div class="pb btnr">
+      <b><p class="text-muted" style="font-size:30pt" th:text="${#numbers.formatDecimal({el.price}, 0, 'WHITESPACE', 2, 'POINT')} +' руб.'"></p></b><div class="btn-group" style="">
+      <a th:href="'/index/'+${el.id}" class="btn btn-sm btn-outline-secondary blok good1">Подробнее</a>
+      <p class="item_title" th:text="${el.name}" style="display:none"></p>
+      <p class="item_price" th:text="${el.price}"style="display:none"></p>
+      <p class="item_img" th:text="${el.img}"style="display:none"></p>
+      <button type="button" th:data-id="${el.id}" class="btn btn-sm btn-outline-secondary blok good1 add_item showbd">В корзину</button>
+    </div></div> </div> </div> </div> </div>
+
+  <div id = "pr" class=""> <h1 style="text-align:center"></h1>
+    <div th:each="el : ${products}" th:if="${#strings.contains({el.price},{find})}==true" class="item_box"> <div class="card">
+      <img class="card-img-left" style = "width:15%" th:src="${el.img}"  alt="Card image cap"><div class="card-body"> <div class ="btnl">
+      <h5 class="card-title" th:text="${el.name}"/>
+      <p class="card-text" th:text="${el.about}"/> </div> <div class="pb btnr">
+      <b><p class="text-muted" style="font-size:30pt" th:text="${#numbers.formatDecimal({el.price}, 0, 'WHITESPACE', 2, 'POINT')} +' руб.'"></p></b><div class="btn-group" style="">
+      <a th:href="'/index/'+${el.id}" class="btn btn-sm btn-outline-secondary blok good1">Подробнее</a>
+      <p class="item_title" th:text="${el.name}" style="display:none"></p>
+      <p class="item_price" th:text="${el.price}"style="display:none"></p>
+      <p class="item_img" th:text="${el.img}"style="display:none"></p>
+      <button type="button" th:data-id="${el.id}" class="btn btn-sm btn-outline-secondary blok good1 add_item showbd">В корзину</button>
+    </div></div> </div> </div> </div> </div>
+
+  <div id = "br" class=""> <h1 style="text-align:center"></h1>
+    <div th:each="el : ${products}" th:if="${#strings.contains({el.tegb},{find})}==true" class="item_box"> <div class="card">
+      <img class="card-img-left" style = "width:15%" th:src="${el.img}"  alt="Card image cap"><div class="card-body"> <div class ="btnl">
+      <h5 class="card-title" th:text="${el.name}"/>
+      <p class="card-text" th:text="${el.about}"/> </div> <div class="pb btnr">
+      <b><p class="text-muted" style="font-size:30pt" th:text="${#numbers.formatDecimal({el.price}, 0, 'WHITESPACE', 2, 'POINT')} +' руб.'"></p></b><div class="btn-group" style="">
+      <a th:href="'/index/'+${el.id}" class="btn btn-sm btn-outline-secondary blok good1">Подробнее</a>
+      <p class="item_title" th:text="${el.name}" style="display:none"></p>
+      <p class="item_price" th:text="${el.price}"style="display:none"></p>
+      <p class="item_img" th:text="${el.img}"style="display:none"></p>
+      <button type="button" th:data-id="${el.id}" class="btn btn-sm btn-outline-secondary blok good1 add_item showbd">В корзину</button>
+    </div></div> </div> </div> </div> </div>
+  
+
+  <div id = "ab" class=""> <h1 style="text-align:center"></h1>
+    <div th:each="el : ${products}" th:if="${#strings.contains({el.about},{find})}==true" class="item_box"> <div class="card">
+      <img class="card-img-left" style = "width:15%" th:src="${el.img}"  alt="Card image cap"><div class="card-body"> <div class ="btnl">
+      <h5 class="card-title" th:text="${el.name}"/>
+      <p class="card-text" th:text="${el.about}"/> </div> <div class="pb btnr">
+      <b><p class="text-muted" style="font-size:30pt" th:text="${#numbers.formatDecimal({el.price}, 0, 'WHITESPACE', 2, 'POINT')} +' руб.'"></p></b><div class="btn-group" style="">
+      <a th:href="'/index/'+${el.id}" class="btn btn-sm btn-outline-secondary blok good1">Подробнее</a>
+      <p class="item_title" th:text="${el.name}" style="display:none"></p>
+      <p class="item_price" th:text="${el.price}"style="display:none"></p>
+      <p class="item_img" th:text="${el.img}"style="display:none"></p>
+      <button type="button" th:data-id="${el.id}" class="btn btn-sm btn-outline-secondary blok good1 add_item showbd">В корзину</button>
+    </div></div> </div> </div> </div> </div>
+
+  <div id = "ab2" class=""> <h1 style="text-align:center"></h1>
+    <div th:each="el : ${products}" th:if="${#strings.contains({el.opisanie},{find})}==true" class="item_box"> <div class="card">
+      <img class="card-img-left" style = "width:15%" th:src="${el.img}"  alt="Card image cap"><div class="card-body"> <div class ="btnl">
+      <h5 class="card-title" th:text="${el.name}"/>
+      <p class="card-text" th:text="${el.about}"/> </div> <div class="pb btnr">
+      <b><p class="text-muted" style="font-size:30pt" th:text="${#numbers.formatDecimal({el.price}, 0, 'WHITESPACE', 2, 'POINT')} +' руб.'"></p></b><div class="btn-group" style="">
+      <a th:href="'/index/'+${el.id}" class="btn btn-sm btn-outline-secondary blok good1">Подробнее</a>
+      <p class="item_title" th:text="${el.name}" style="display:none"></p>
+      <p class="item_price" th:text="${el.price}"style="display:none"></p>
+      <p class="item_img" th:text="${el.img}"style="display:none"></p>
+      <button type="button" th:data-id="${el.id}" class="btn btn-sm btn-outline-secondary blok good1 add_item showbd">В корзину</button>
+    </div></div> </div> </div> </div> </div>
+
+</div>
+
+
+<div id = "m" class=""> <h1 style="text-align:center">Запчасти Б/У</h1>
+  <div th:each="el : ${products}" th:if="${el.tegg}==man" class="item_box"> <div class="card">
+    <img class="card-img-left" style = "width:15%" th:src="${el.img}"  alt="Card image cap"><div class="card-body"> <div class ="btnl">
+    <h5 class="card-title" th:text="${el.name}"/>
+    <p class="card-text" th:text="${el.about}"/> </div> <div class="pb btnr">
+    <b><p class="text-muted" style="font-size:30pt" th:text="${#numbers.formatDecimal({el.price}, 0, 'WHITESPACE', 2, 'POINT')} +' руб.'"></p></b><div class="btn-group" style="">
+    <a th:href="'/index/'+${el.id}" class="btn btn-sm btn-outline-secondary blok good1">Подробнее</a>
+    <p class="item_title" th:text="${el.name}" style="display:none"></p>
+    <p class="item_price" th:text="${el.price}"style="display:none"></p>
+    <p class="item_img" th:text="${el.img}"style="display:none"></p>
+    <button type="button" th:data-id="${el.id}" class="btn btn-sm btn-outline-secondary blok good1 add_item showbd">В корзину</button>
+  </div></div> </div> </div> </div> </div>
+
+<div id = "w" class=""> <h1 style="text-align:center">Запчасти</h1>
+  <div th:each="el : ${products}" th:if="${el.tegg}==wman" class="item_box"> <div class="card">
+    <img class="card-img-left" style = "width:15%" th:src="${el.img}"  alt="Card image cap"><div class="card-body"> <div class ="btnl">
+    <h5 class="card-title" th:text="${el.name}"/>
+    <p class="card-text" th:text="${el.about}"/> </div> <div class="pb btnr">
+    <b><p class="text-muted" style="font-size:30pt" th:text="${#numbers.formatDecimal({el.price}, 0, 'WHITESPACE', 2, 'POINT')} +' руб.'"></p></b><div class="btn-group" style="">
+    <a th:href="'/index/'+${el.id}" class="btn btn-sm btn-outline-secondary blok good1">Подробнее</a>
+    <p class="item_title" th:text="${el.name}" style="display:none"></p>
+    <p class="item_price" th:text="${el.price}"style="display:none"></p>
+    <p class="item_img" th:text="${el.img}"style="display:none"></p>
+    <button type="button" th:data-id="${el.id}" class="btn btn-sm btn-outline-secondary blok good1 add_item showbd">В корзину</button>
+  </div></div> </div> </div> </div> </div>
+
+<div id = "wd" class=""> <br><h1 style="text-align:center">Диски</h1>
+  <div th:each="el : ${products}" th:if="${el.teg}==d and ${el.tegg}==wman" class="item_box"> <div class="card">
+    <img class="card-img-left" style = "width:15%" th:src="${el.img}"  alt="Card image cap"><div class="card-body"> <div class ="btnl">
+    <h5 class="card-title" th:text="${el.name}"/>
+    <p class="card-text" th:text="${el.about}"/> </div> <div class="pb btnr">
+    <b><p class="text-muted" style="font-size:30pt" th:text="${#numbers.formatDecimal({el.price}, 0, 'WHITESPACE', 2, 'POINT')} +' руб.'"></p></b><div class="btn-group" style="">
+    <a th:href="'/index/'+${el.id}" class="btn btn-sm btn-outline-secondary blok good1">Подробнее</a>
+    <p class="item_title" th:text="${el.name}" style="display:none"></p>
+    <p class="item_price" th:text="${el.price}"style="display:none"></p>
+    <p class="item_img" th:text="${el.img}"style="display:none"></p>
+    <button type="button" th:data-id="${el.id}" class="btn btn-sm btn-outline-secondary blok good1 add_item showbd">В корзину</button>
+  </div></div> </div> </div> </div> </div>
+
+<div id = "md" class=""><br><h1 style="text-align:center">Б/У диски</h1>
+  <div th:each="el : ${products}" th:if="${el.teg}==d and ${el.tegg}==man" class="item_box"> <div class="card">
+    <img class="card-img-left" style = "width:15%" th:src="${el.img}"  alt="Card image cap"><div class="card-body"> <div class ="btnl">
+    <h5 class="card-title" th:text="${el.name}"/>
+    <p class="card-text" th:text="${el.about}"/> </div> <div class="pb btnr">
+    <b><p class="text-muted" style="font-size:30pt" th:text="${#numbers.formatDecimal({el.price}, 0, 'WHITESPACE', 2, 'POINT')} +' руб.'"></p></b><div class="btn-group" style="">
+    <a th:href="'/index/'+${el.id}" class="btn btn-sm btn-outline-secondary blok good1">Подробнее</a>
+    <p class="item_title" th:text="${el.name}" style="display:none"></p>
+    <p class="item_price" th:text="${el.price}"style="display:none"></p>
+    <p class="item_img" th:text="${el.img}"style="display:none"></p>
+    <button type="button" th:data-id="${el.id}" class="btn btn-sm btn-outline-secondary blok good1 add_item showbd">В корзину</button>
+  </div></div> </div> </div> </div> </div>
+
+<div id = "wl" class=""> <br><h1 style="text-align:center">Шины</h1>
+  <div th:each="el : ${products}" th:if="${el.teg}==l and ${el.tegg}==wman" class="item_box"> <div class="card">
+    <img class="card-img-left" style = "width:15%" th:src="${el.img}"  alt="Card image cap"><div class="card-body"> <div class ="btnl">
+    <h5 class="card-title" th:text="${el.name}"/>
+    <p class="card-text" th:text="${el.about}"/> </div> <div class="pb btnr">
+    <b><p class="text-muted" style="font-size:30pt" th:text="${#numbers.formatDecimal({el.price}, 0, 'WHITESPACE', 2, 'POINT')} +' руб.'"></p></b><div class="btn-group" style="">
+    <a th:href="'/index/'+${el.id}" class="btn btn-sm btn-outline-secondary blok good1">Подробнее</a>
+    <p class="item_title" th:text="${el.name}" style="display:none"></p>
+    <p class="item_price" th:text="${el.price}"style="display:none"></p>
+    <p class="item_img" th:text="${el.img}"style="display:none"></p>
+    <button type="button" th:data-id="${el.id}" class="btn btn-sm btn-outline-secondary blok good1 add_item showbd">В корзину</button>
+  </div></div> </div> </div> </div> </div>
+
+<div id = "ml" class=""><br><h1 style="text-align:center">Б/У шины</h1>
+  <div th:each="el : ${products}" th:if="${el.teg}==l and ${el.tegg}==man" class="item_box"> <div class="card">
+    <img class="card-img-left" style = "width:15%" th:src="${el.img}"  alt="Card image cap"><div class="card-body"> <div class ="btnl">
+    <h5 class="card-title" th:text="${el.name}"/>
+    <p class="card-text" th:text="${el.about}"/> </div> <div class="pb btnr">
+    <b><p class="text-muted" style="font-size:30pt" th:text="${#numbers.formatDecimal({el.price}, 0, 'WHITESPACE', 2, 'POINT')} +' руб.'"></p></b><div class="btn-group" style="">
+    <a th:href="'/index/'+${el.id}" class="btn btn-sm btn-outline-secondary blok good1">Подробнее</a>
+    <p class="item_title" th:text="${el.name}" style="display:none"></p>
+    <p class="item_price" th:text="${el.price}"style="display:none"></p>
+    <p class="item_img" th:text="${el.img}"style="display:none"></p>
+    <button type="button" th:data-id="${el.id}" class="btn btn-sm btn-outline-secondary blok good1 add_item showbd">В корзину</button>
+  </div></div> </div> </div> </div> </div>
+
+<div id = "wv" class=""> <br><h1 style="text-align:center">Аккумуляторы</h1>
+  <div th:each="el : ${products}" th:if="${el.teg}==v and ${el.tegg}==wman" class="item_box"> <div class="card">
+    <img class="card-img-left" style = "width:15%" th:src="${el.img}"  alt="Card image cap"><div class="card-body"> <div class ="btnl">
+    <h5 class="card-title" th:text="${el.name}"/>
+    <p class="card-text" th:text="${el.about}"/> </div> <div class="pb btnr">
+    <b><p class="text-muted" style="font-size:30pt" th:text="${#numbers.formatDecimal({el.price}, 0, 'WHITESPACE', 2, 'POINT')} +' руб.'"></p></b><div class="btn-group" style="">
+    <a th:href="'/index/'+${el.id}" class="btn btn-sm btn-outline-secondary blok good1">Подробнее</a>
+    <p class="item_title" th:text="${el.name}" style="display:none"></p>
+    <p class="item_price" th:text="${el.price}"style="display:none"></p>
+    <p class="item_img" th:text="${el.img}"style="display:none"></p>
+    <button type="button" th:data-id="${el.id}" class="btn btn-sm btn-outline-secondary blok good1 add_item showbd">В корзину</button>
+  </div></div> </div> </div> </div> </div>
+
+<div id = "mv" class=""><br><h1 style="text-align:center">Б/У Аккумуляторы</h1>
+  <div th:each="el : ${products}" th:if="${el.teg}==v and ${el.tegg}==man" class="item_box"> <div class="card">
+    <img class="card-img-left" style = "width:15%" th:src="${el.img}"  alt="Card image cap"><div class="card-body"> <div class ="btnl">
+    <h5 class="card-title" th:text="${el.name}"/>
+    <p class="card-text" th:text="${el.about}"/> </div> <div class="pb btnr">
+    <b><p class="text-muted" style="font-size:30pt" th:text="${#numbers.formatDecimal({el.price}, 0, 'WHITESPACE', 2, 'POINT')} +' руб.'"></p></b><div class="btn-group" style="">
+    <a th:href="'/index/'+${el.id}" class="btn btn-sm btn-outline-secondary blok good1">Подробнее</a>
+    <p class="item_title" th:text="${el.name}" style="display:none"></p>
+    <p class="item_price" th:text="${el.price}"style="display:none"></p>
+    <p class="item_img" th:text="${el.img}"style="display:none"></p>
+    <button type="button" th:data-id="${el.id}" class="btn btn-sm btn-outline-secondary blok good1 add_item showbd">В корзину</button>
+  </div></div> </div> </div> </div> </div>
+
+<div id = "wm" class=""> <br><h1 style="text-align:center">Запчасти для ТО</h1>
+  <div th:each="el : ${products}" th:if="${el.teg}==m and ${el.tegg}==wman" class="item_box"> <div class="card">
+    <img class="card-img-left" style = "width:15%" th:src="${el.img}"  alt="Card image cap"><div class="card-body"> <div class ="btnl">
+    <h5 class="card-title" th:text="${el.name}"/>
+    <p class="card-text" th:text="${el.about}"/> </div> <div class="pb btnr">
+    <b><p class="text-muted" style="font-size:30pt" th:text="${#numbers.formatDecimal({el.price}, 0, 'WHITESPACE', 2, 'POINT')} +' руб.'"></p></b><div class="btn-group" style="">
+    <a th:href="'/index/'+${el.id}" class="btn btn-sm btn-outline-secondary blok good1">Подробнее</a>
+    <p class="item_title" th:text="${el.name}" style="display:none"></p>
+    <p class="item_price" th:text="${el.price}"style="display:none"></p>
+    <p class="item_img" th:text="${el.img}"style="display:none"></p>
+    <button type="button" th:data-id="${el.id}" class="btn btn-sm btn-outline-secondary blok good1 add_item showbd">В корзину</button>
+  </div></div> </div> </div> </div> </div>
+
+<div id = "mm" class=""><br><h1 style="text-align:center">Б/У запчасти для ТО</h1>
+  <div th:each="el : ${products}" th:if="${el.teg}==m and ${el.tegg}==man" class="item_box"> <div class="card">
+    <img class="card-img-left" style = "width:15%" th:src="${el.img}"  alt="Card image cap"><div class="card-body"> <div class ="btnl">
+    <h5 class="card-title" th:text="${el.name}"/>
+    <p class="card-text" th:text="${el.about}"/> </div> <div class="pb btnr">
+    <b><p class="text-muted" style="font-size:30pt" th:text="${#numbers.formatDecimal({el.price}, 0, 'WHITESPACE', 2, 'POINT')} +' руб.'"></p></b><div class="btn-group" style="">
+    <a th:href="'/index/'+${el.id}" class="btn btn-sm btn-outline-secondary blok good1">Подробнее</a>
+    <p class="item_title" th:text="${el.name}" style="display:none"></p>
+    <p class="item_price" th:text="${el.price}"style="display:none"></p>
+    <p class="item_img" th:text="${el.img}"style="display:none"></p>
+    <button type="button" th:data-id="${el.id}" class="btn btn-sm btn-outline-secondary blok good1 add_item showbd">В корзину</button>
+  </div></div> </div> </div> </div> </div>
+
+<div id = "bra" class=""> <h1 style="text-align:center">Ad</h1>
+  <div th:each="el : ${products}" th:if="${el.tegb}==Adore" class="item_box"> <div class="card">
+    <img class="card-img-left" style = "width:15%" th:src="${el.img}"  alt="Card image cap"><div class="card-body"> <div class ="btnl">
+    <h5 class="card-title" th:text="${el.name}"/>
+    <p class="card-text" th:text="${el.about}"/> </div> <div class="pb btnr">
+    <b><p class="text-muted" style="font-size:30pt" th:text="${#numbers.formatDecimal({el.price}, 0, 'WHITESPACE', 2, 'POINT')} +' руб.'"></p></b><div class="btn-group" style="">
+    <a th:href="'/index/'+${el.id}" class="btn btn-sm btn-outline-secondary blok good1">Подробнее</a>
+    <p class="item_title" th:text="${el.name}" style="display:none"></p>
+    <p class="item_price" th:text="${el.price}"style="display:none"></p>
+    <p class="item_img" th:text="${el.img}"style="display:none"></p>
+    <button type="button" th:data-id="${el.id}" class="btn btn-sm btn-outline-secondary blok good1 add_item showbd">В корзину</button>
+  </div></div> </div> </div> </div> </div>
+
+<div id = "brb" class=""> <h1 style="text-align:center">Gore</h1>
+  <div th:each="el : ${products}" th:if="${el.tegb}==Baldi" class="item_box"> <div class="card">
+    <img class="card-img-left" style = "width:15%" th:src="${el.img}"  alt="Card image cap"><div class="card-body"> <div class ="btnl">
+    <h5 class="card-title" th:text="${el.name}"/>
+    <p class="card-text" th:text="${el.about}"/> </div> <div class="pb btnr">
+    <b><p class="text-muted" style="font-size:30pt" th:text="${#numbers.formatDecimal({el.price}, 0, 'WHITESPACE', 2, 'POINT')} +' руб.'"></p></b><div class="btn-group" style="">
+    <a th:href="'/index/'+${el.id}" class="btn btn-sm btn-outline-secondary blok good1">Подробнее</a>
+    <p class="item_title" th:text="${el.name}" style="display:none"></p>
+    <p class="item_price" th:text="${el.price}"style="display:none"></p>
+    <p class="item_img" th:text="${el.img}"style="display:none"></p>
+    <button type="button" th:data-id="${el.id}" class="btn btn-sm btn-outline-secondary blok good1 add_item showbd">В корзину</button>
+  </div></div> </div> </div> </div> </div>
+
+<div id = "brc" class=""> <h1 style="text-align:center">Look</h1>
+  <div th:each="el : ${products}" th:if="${el.tegb}==Cactus" class="item_box"> <div class="card">
+    <img class="card-img-left" style = "width:15%" th:src="${el.img}"  alt="Card image cap"><div class="card-body"> <div class ="btnl">
+    <h5 class="card-title" th:text="${el.name}"/>
+    <p class="card-text" th:text="${el.about}"/> </div> <div class="pb btnr">
+    <b><p class="text-muted" style="font-size:30pt" th:text="${#numbers.formatDecimal({el.price}, 0, 'WHITESPACE', 2, 'POINT')} +' руб.'"></p></b><div class="btn-group" style="">
+    <a th:href="'/index/'+${el.id}" class="btn btn-sm btn-outline-secondary blok good1">Подробнее</a>
+    <p class="item_title" th:text="${el.name}" style="display:none"></p>
+    <p class="item_price" th:text="${el.price}"style="display:none"></p>
+    <p class="item_img" th:text="${el.img}"style="display:none"></p>
+    <button type="button" th:data-id="${el.id}" class="btn btn-sm btn-outline-secondary blok good1 add_item showbd">В корзину</button>
+  </div></div> </div> </div> </div> </div>
+
+<div id = "brd" class=""> <h1 style="text-align:center">Star</h1>
+  <div th:each="el : ${products}" th:if="${el.tegb}==Daigo" class="item_box"> <div class="card">
+    <img class="card-img-left" style = "width:15%" th:src="${el.img}"  alt="Card image cap"><div class="card-body"> <div class ="btnl">
+    <h5 class="card-title" th:text="${el.name}"/>
+    <p class="card-text" th:text="${el.about}"/> </div> <div class="pb btnr">
+    <b><p class="text-muted" style="font-size:30pt" th:text="${#numbers.formatDecimal({el.price}, 0, 'WHITESPACE', 2, 'POINT')} +' руб.'"></p></b><div class="btn-group" style="">
+    <a th:href="'/index/'+${el.id}" class="btn btn-sm btn-outline-secondary blok good1">Подробнее</a>
+    <p class="item_title" th:text="${el.name}" style="display:none"></p>
+    <p class="item_price" th:text="${el.price}"style="display:none"></p>
+    <p class="item_img" th:text="${el.img}"style="display:none"></p>
+    <button type="button" th:data-id="${el.id}" class="btn btn-sm btn-outline-secondary blok good1 add_item showbd">В корзину</button>
+  </div></div> </div> </div> </div> </div>
+
+
+
+<script>
+var d = document,
+itemBox = d.querySelectorAll('.item_box'); // блок каждого товара
+
+// Функция кроссбраузерной установка обработчика событий
+function addEvent(elem, type, handler){
+  if(elem.addEventListener){
+    elem.addEventListener(type, handler, false);
+  } else {
+    elem.attachEvent('on'+type, function(){ handler.call( elem ); });
+  }
+  return false;
+}
+// Получаем данные из LocalStorage
+function getCartData(){
+  return JSON.parse(localStorage.getItem('cart'));
+}
+// Записываем данные в LocalStorage
+function setCartData(o){
+  localStorage.setItem('cart', JSON.stringify(o));
+  return false;
+}
+// Добавляем товар в корзину
+var pr = 1;
+function addToCart(e){
+  this.disabled = true; // блокируем кнопку на время операции с корзиной
+  var cartData = getCartData() || {}, // получаем данные корзины или создаём новый объект, если данных еще нет
+      parentBox = this.parentNode, // родительский элемент кнопки "Добавить в корзину"
+      itemId = this.getAttribute('data-id'), // ID товара
+      del = '<div><button class="del" style="outline: none;border: 0;background: transparent;font-size: 25px;" type="button" name="button"><img src="https://designmodo.com/demo/shopping-cart/delete-icn.svg" alt=""></button><input type="text" class="ids" value="'+itemId+'"style="display:none"><input type="text" name="titles" value="'+itemTitle+'"style="display:none"><input type="text" name="prices" value="'+itemPrice+'"style="display:none"></div>',
+      itemTitle = parentBox.querySelector('.item_title').innerHTML, // название товара
+      itemPrice = parentBox.querySelector('.item_price').innerHTML; // стоимость товара
+      itemImg = parentBox.querySelector('.item_img').innerHTML;
+      console.log('img'+itemImg);
+      var img = '<div style="width:100%"><img class="imgp" style = "widht:50px" src="'+itemImg+'"  alt="Card image cap"></div>';
+  if(cartData.hasOwnProperty(itemId)){ // если такой товар уже в корзине, то добавляем +1 к его количеству
+     cartData[itemId][6] +=1;
+     pr = Number(cartData[itemId][6]);
+     delete cartData[itemId][4];
+     it = '<div class="quantity"><input type="text" class="ids" value="'+itemId+'"style="display:none"><button class="minus-btn" type="button" style="outline: none;border: 0;background: transparent;font-size: 25px;" name="button"><img src="https://designmodo.com/demo/shopping-cart/minus.svg" alt=""></button><input type="text" class="kv" style="width: 10%" name="name" value="'+pr+'"><button class="plus-btn" style="outline: none;border: 0;background: transparent;font-size: 25px;" type="button" name="button"><img src="https://designmodo.com/demo/shopping-cart/plus.svg" alt=""></button></div>'
+     cartData[itemId][4]=it;
+     console.log(pr);
+  } else { // если товара в корзине еще нет, то добавляем в объект
+    it = '<div class="quantity"><input type="text" class="ids" value="'+itemId+'"style="display:none"><button class="minus-btn" type="button" style="outline: none;border: 0;background: transparent;font-size: 25px;" name="button"><img src="https://designmodo.com/demo/shopping-cart/minus.svg" alt=""></button><input type="text" class="kv" style="width: 10%" name="name" value="1"><button class="plus-btn" style="outline: none;border: 0;background: transparent;font-size: 25px;" type="button" name="button"><img src="https://designmodo.com/demo/shopping-cart/plus.svg" alt=""></button></div>'
+    cartData[itemId] = [del,img,itemTitle,itemPrice+' руб.',it,itemPrice,1];
+  }
+  if(!setCartData(cartData)){ // Обновляем данные в LocalStorage
+    this.disabled = false; // разблокируем кнопку после обновления LS
+  }
+
+ return false;
+}
+// Устанавливаем обработчик события на каждую кнопку "Добавить в корзину"
+for(var i = 0; i < itemBox.length; i++){
+  addEvent(itemBox[i].querySelector('.add_item'), 'click', addToCart);
+}
+</script>
+
+
+<style>
+.imgc {
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    width: 50%;
+}
+.blok {
+    background: #ff0000;
+}
+.btnr{
+float:right;
+text-align:center;
+padding: 10px 0;
+}
+.btnl{
+float:left;
+width:55%;
+}
+.pb{
+width:40%;
+height:100%;
+margin-top: 5%;;
+}
+.card{
+width:100%;
+max-width: 800px;
+max-height: 250px;
+margin-left:auto;
+margin-right:auto;
+flex-direction:unset;
+overflow: hidden;
+margin-bottom:10px;
+
+position: relative;
+display: flex;
+min-width: 50%;
+word-wrap: break-word;
+background-color: #fff;
+background-clip: border-box;
+border: 2px solid rgba(0,0,0,.125);
+border-radius: 2rem;
+}
+.card-text{
+    height: 150px;
+    display: -webkit-box;
+    -webkit-line-clamp: 6;
+    -webkit-box-orient: vertical;
+    overflow: hidden;
+}
+.card-body{
+float:right;
+margin-right: auto;
+margin-left:auto;
+width:50%;
+}
+.cf{
+width:60%;
+height:300px;
+}
+.clp{
+width:100%;
+height:300px;
+margin-left: auto;
+margin-right: auto;
+}
+.cp{
+width:40%;
+float:left;
+padding:0px;
+margin-left: auto;
+margin-right: auto;
+
+}
+.cpt{
+text-align:center;
+width: 100%;
+height:450px;
+margin-left: auto;
+margin-right: auto;
+}
+.floated {
+   float:left;
+   margin-right:5px;
+}
+.cpbl{
+width:45%;
+margin-left:0;
+margin-right: auto;
+}
+.cpbr{
+width:20%
+margin-right:0;
+margin-left:auto;
+}
+.justify-content-center {
+    justify-content: center!important;
+}
+
+.kt{
+font-size:120pt;
+text-align:center;
+}
+
+.scd{
+    width: 50%;
+    padding-right: var(--bs-gutter-x,.75rem);
+    padding-left: var(--bs-gutter-x,.75rem);
+
+}
+a:hover {
+    color:  #880e4f;
+    cursor: pointer;
+    text-decoration: none;
+}
+a {
+    color: black;
+    text-decoration: none;
+}
+
+a:-webkit-any-link{
+
+}
+
+body {margin:0;}
+h2 {
+  font-family: monospace;
+  color: #00000000;
+}
+nav {
+  width: 660px;
+  margin: 0 auto 30px;
+}
+ul {
+  list-style: none;
+  margin-left: auto;
+  padding: 0 ;
+}
+ .topmenu {
+ text-align: center;
+ }
+.topmenu > li {
+  display: inline-block;
+  margin: 0;
+  padding: 15px;
+  position: relative;
+}
+.topmenu > li:last-child {
+  margin-right: 0;
+}
+.fa {
+  font-family: "FontAwesome";
+  color: inherit;
+  padding-left: 0px;
+}
+.submenu {
+  position: absolute;
+  top: 100%;
+  left: 0;
+  width: 100%;
+  z-index: 10;
+  -webkit-transition: 0.5s ease-in-out;
+  -moz-transition: 0.5s ease-in-out;
+  -o-transition: 0.5s ease-in-out;
+  transition: 0.5s ease-in-out;
+
+}
+.one ul {
+  background: 00000000;
+}
+.one ul a {
+  color: #695753;
+}
+.one .submenu {
+  display: none;
+  background: 00000000;
+
+}
+.one ul li:hover .submenu {
+  display: block;
+
+
+}
+</style>
+
+
+<style type="text/css">
+   #content {
+    width: 500px; /* Ширина слоя */
+    margin: 0 auto 50px; /* Выравнивание по центру */
+   }
+   #footer {
+    position: fixed; /* Фиксированное положение */
+    left: 0; bottom: 0; /* Левый нижний угол */
+    color: #fff; /* Цвет текста */
+    width: 100%; /* Ширина слоя */
+   }
+
+  .bcss {
+    display: block;
+    width: 100%;
+    border: none;
+    background-color: #4CAF50;
+    padding: 14px 28px;
+    font-size: 16px;
+    text-align: center;
+}
+</style>
+
+
+<div id="footer">
+  <div id="bd"><strong class="bcss">Добавлена в корзину</strong></div>
+</div>
+
+<script>
+$( document ).ready(function(){
+$( "div#bd").hide();
+$( ".showbd" ).click(function(){
+	    $( "div#bd" ).show();
+        setTimeout(function(){
+           $("div#bd").hide();//проявляем
+        },1000);
+	  });
+});
+</script>
+
+</body>
+
+
+</html>
